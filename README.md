@@ -149,7 +149,7 @@ Pull requests are welcome! Feel free to file issues or suggest features.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed 
 
 ## Acknowledgements
 
@@ -172,3 +172,9 @@ Thanks to open-source tools like SockJS, Spring Boot, and html2pdf.js that made 
 
 
 <img width="1920" height="899" alt="Image" src="https://github.com/user-attachments/assets/2dd0495f-76c0-4cb0-9fcb-afbe1d741b9f" />
+
+
+## Document Collaborate
+
+
+<img width="1920" height="916" alt="Image" src="https://github.com/user-attachments/assets/149dc922-c106-4e6c-884f-ad2d1f496d63" />

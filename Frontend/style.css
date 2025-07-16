@@ -1,0 +1,362 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafb;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #D2AC47;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #79305a;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #b55385;
+  color:#000;
+  transform: scale(1.05);
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background:linear-gradient(to right, #e0bbd2, #bf6b99) ;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #79305a;
+}
+
+.hero p {
+  font-weight:bold;
+  font-size: 0.9em;
+  color: #374151;
+}
+
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color:#D2AC47;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature-card {
+  background:linear-gradient(to right, #e0bbd2, #bf6b99) ;
+  padding: 30px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #F3E5AB;
+  font-size: 0.8em;
+  font-weight:bold;
+  color: #926F34;
+}
+
+/* workspace css */
+
+.workspace-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #79305a;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar-header {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+  background: #e0bbd2;
+  color: black;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+.workspace-topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 50%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.file-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.file-card {
+  background: white;
+  padding: 15px 12px;
+  border-radius: 10px;
+  width: 160px; /* reduce from 180px */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  font-size: 0.9em; /* smaller text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.delete-doc, .fav-toggle {
+  user-select: none;
+}
+
+.file-icon {
+  font-size: 1.6em;
+}
+
+.file-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.topbar-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .topbar-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar,
+  .new-doc-btn {
+    width: 100%;
+  }
+}
+
+.file-actions {
+  display: flex;
+  gap: 8px;
+  font-size: 1em;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+
+/* editor css */
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #e0bbd2;
+}
+
+.editor-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.doc-title {
+  font-size: 1.2em;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 300px;
+}
+
+.editor-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.collab-indicator {
+  color: #16a34a;
+  font-size: 0.9em;
+  margin-right: 10px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px 30px;
+  background: #b33b72;
+  border-bottom: 1px solid #cbd5e1;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.toolbar select,
+.toolbar input[type="color"] {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.toolbar button {
+  padding: 8px 12px;
+  border: none;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toolbar button:hover {
+  background: #e0bbd2;
+}
+
+.editor-area {
+  flex: 1;
+  padding: 30px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  outline: none;
+  background: #ffffff;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .toolbar button,
+  .toolbar select,
+  .toolbar input[type="color"] {
+    padding: 6px 8px;
+    font-size: 0.85em;
+    height: 32px;
+  }
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DocEdit Workspace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="workspace-container">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">📁 My Workspace</div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="#" id="recent-link">Recent Docs</a>
+      <a href="#" id="fav-link">Favorite Docs</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="workspace-topbar">
+      <div class="topbar-group">
+        <input type="text" placeholder="Search your documents..." class="search-bar">
+        <button class="btn-primary new-doc-btn" onclick="openModal()">+ New</button>
+      </div>
+    </div>
+
+    <h2 class="section-title">My Documents</h2>
+    <div class="file-grid" id="fileGrid">
+      <!-- Documents will be dynamically loaded here -->
+    </div>
+  </main>
+
+</div>
+
+<div id="createModal" class="modal">
+  <div class="modal-content">
+    <h3>Create New Document</h3>
+    <input type="text" id="itemName" placeholder="Enter document name..." />
+    <div class="modal-buttons">
+      <button onclick="closeModal()" class="btn-outline">Cancel</button>
+      <button onclick="createItem()" class="btn-primary">Create</button>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/workspace.js"></script>
+</body>
+</html>

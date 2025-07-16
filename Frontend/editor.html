@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="editor-container">
+  <header class="editor-topbar">
+    <input type="text" value="Untitled Doc" class="doc-title">
+    <div class="editor-actions">
+      <span class="collab-indicator">Live</span>
+      <button onclick="downloadAsPDF()">⬇️ Download</button>
+      <button class="btn-primary" onclick="saveDoc()">Save</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button onclick="execCmd('bold')"><b>B</b></button>
+    <button onclick="execCmd('italic')"><i>I</i></button>
+    <button onclick="execCmd('underline')"><u>U</u></button>
+    <button onclick="execCmd('insertUnorderedList')">ul</button>
+    <button onclick="execCmd('insertOrderedList')">ol</button>
+    <button onclick="highlightText()">Highlight</button>
+    <button onclick="triggerImageUpload()">+Img</button>
+
+    <select onchange="changeFont(this.value)">
+      <option value="">Font</option>
+      <option value="Arial">Arial</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Courier New">Courier</option>
+      <option value="Times New Roman">Times</option>
+    </select>
+
+    <select onchange="changeFontSize(this.value)">
+      <option value="">Size</option>
+      <option value="1">Small</option>
+      <option value="3">Normal</option>
+      <option value="5">Large</option>
+      <option value="7">X-Large</option>
+    </select>
+
+    <input type="color" onchange="changeColor(this.value)" title="Text color" />
+
+  </div>
+
+
+  <div id="editor" contenteditable="true" class="editor-area">
+    Loading document...
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+<script src="scripts/editor.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<input type="file" id="imageInput" accept="image/*" style="display: none;" />
+
+</body>
+</html>
